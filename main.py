@@ -1,6 +1,7 @@
 from collections import namedtuple
 import smtplib, ssl
 import getpass
+import xlwt
 
 
 # Person = namedtuple('Person', 'fname, lname, email, mob, dob')
@@ -21,34 +22,52 @@ import getpass
 
 #----------------Using .starttls() method (first creating unsecured connection and then encrypting it with .starttls())--------------
 
-smtp_server = "smtp.gmail.com"
-port = 587 # port for .starttls()
-
-sender_email = "vikesh.patil8340@gmail.com"
-receiver_email = "rajp8340@gmail.com"
-password = getpass.unix_getpass("Enter Password: ")
-
-context = ssl.create_default_context()
-
-message = "Testing Automated B'Day wish"
+# port = 587 # port for .starttls()
+# smtp_server = "smtp.gmail.com"
+#
+# sender_email = "vikesh.patil8340@gmail.com"
+# receiver_email = "rajp8340@gmail.com"
+# password = getpass.unix_getpass("Enter Password: ")
+#
+# context = ssl.create_default_context()
+#
+# message = """\
+#           Subject: Hi there!
+#
+#           Testing Automated B'Day wish"""
 
 #login to server and send email
+#
+# try:
+#     server = smtplib.SMTP(smtp_server, port)
+#     server.ehlo() #To identify yourself to the server, .helo() (SMTP) or .ehlo() (ESMTP) should be called
+#     server.starttls(context=context) #Secure the connection
+#     server.ehlo()
+#     server.login(sender_email, password)
+#
+#     #Send email here
+#     if server.sendmail(sender_email, receiver_email, message):
+#         print("Mail sent!")
+#
+# except Exception as e:
+#     #print errors
+#     print(e)
+# finally:
+#     server.quit()
 
-try:
-    server = smtplib.SMTP(smtp_server, port)
-    server.ehlo() #To identify yourself to the server, .helo() (SMTP) or .ehlo() (ESMTP) should be called
-    server.starttls(context=context) #Secure the connection
-    server.ehlo()
-    server.login(sender_email, password)
+#-------------normal text file----------------------#
+contact = {'vikesh': ('vikesh', 'patil', "8600700549", "rajp8340@gmail.com")}
 
-    #Send email here
-    if server.sendmail(sender_email, receiver_email, message):
-        print("Mail sent!")
+with open('contacts.txt', mode='w') as f:
+    for i in range(len(contact.values())):
+        writeContent = f.write(str(contact['vikesh'][i]) +  '\t')
 
-except Exception as e:
-    #print errors
-    print(e)
-finally:
-    server.quit()
+with open('contacts.txt', mode='r') as f:
+    readContent = f.readlines()
+for j in range(len(readContent)):
+    print(readContent[j] + " ")
+
+#----------------Excel file------------------#
+
 
 
