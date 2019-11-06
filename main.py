@@ -2,6 +2,7 @@ from collections import namedtuple
 import smtplib, ssl
 import getpass
 import xlwt
+import datetime
 
 
 # Person = namedtuple('Person', 'fname, lname, email, mob, dob')
@@ -55,17 +56,23 @@ import xlwt
 # finally:
 #     server.quit()
 
-#-------------normal text file----------------------#
-contact = {'vikesh': ('vikesh', 'patil', "8600700549", "rajp8340@gmail.com")}
+#------------- Storing data in text file----------------------#
 
-with open('contacts.txt', mode='w') as f:
-    for i in range(len(contact.values())):
-        writeContent = f.write(str(contact['vikesh'][i]) +  '\t')
+today = datetime.date.today()
 
 with open('contacts.txt', mode='r') as f:
     readContent = f.readlines()
 for j in range(len(readContent)):
-    print(readContent[j] + " ")
+    if(readContent[j].split()[4] == str(today)):
+        Person = readContent[j].split()
+        name = Person[0] + " " +Person[1]
+        mobile = Person[2]
+        email = Person[3]
+        print("Happy B'day " + name + " . Your mobile numbe is " + mobile + ". And your email is " + email )
+    else:
+        print("Unable to access DOB")
+
+
 
 #----------------Excel file------------------#
 
