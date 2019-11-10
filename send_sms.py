@@ -8,9 +8,9 @@ def sendPostRequest(phoneNo, fname):
         'secret':'6J8EFICA4MMLZS0W',   #replace with original secrete key
         'usetype':'stage',        #replace with prod during production stage
         'phone': phoneNo,
-        'message': """Birthdays are a new start;\n fresh beginnings, a time to start new endeavours with new goals.\n Move forward with fresh 
+        'message': """Birthdays are a new start; fresh beginnings, a time to start new endeavours with new goals. Move forward with fresh 
                     confidence and courage. You are a special person,
-                    may you have an amazing today and year.\n Happy birthday""" + fname,
+                    may you have an amazing today and year. Happy birthday """ + fname,
         'senderid': '8600700549'
   }
     return requests.post(reqUrl, req_params)

@@ -1,5 +1,11 @@
 import smtplib, ssl
+import base64
+
+import os
+from email import encoders
 from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 
 import getpass
@@ -12,7 +18,7 @@ def mail(receiver_mail, fname):
 
     sender_email = "vikesh.patil8340@gmail.com"
     receiver_email = receiver_mail
-    password = "Play!123"
+    password = base64.b64decode(b'UGxheSExMjM=').decode('utf-8')
 
     context = ssl.create_default_context()
 
@@ -23,12 +29,21 @@ def mail(receiver_mail, fname):
 
     html = """\
     <html>
+    <head>
+    <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+        <style>
+            h4{
+            font-size:22px;
+            font-family: 'Yeon Sung', cursive;
+            }
+        </style>
+    </head>
         <body>
         <center>
-        <h4>Birthdays are a new start; <br> fresh beginnings, a time to start new endeavours with new goals.<br> Move forward with fresh 
+        <h4 >Birthdays are a new start; <br> fresh beginnings, a time to start new endeavours with new goals.<br> Move forward with fresh 
     confidence and courage.<br> You are a special person,<br>
-    may you have an amazing today and year. <br> Happy birthday """ + fname + """
-            <br><br><img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+    may you have an amazing today and year. <br> Happy birthday <strong><big>""" + fname + """</big></strong>
+            <br><br><img src="https://res.cloudinary.com/vikesh/image/upload/v1573208937/birthdaypic.jpg" width="100%" height="auto">
         </center>
         </body>    
     </html>
@@ -36,7 +51,21 @@ def mail(receiver_mail, fname):
 
     message.attach(MIMEText(html, 'html'))
 
-    # login to server and send email
+    # ---------------Sending image-------------
+    # img_open = open('birthdaypic.jpg', 'rb')
+    # img = MIMEImage(img_open.read())
+    # img_open.close()
+    # message.attach(img)
+
+#------------------------Attaching Video------------------
+    # part = MIMEBase('application', "octet-stream")
+    # fo = open('birthday_vid.mp4', "rb")
+    # part.set_payload(fo.read())
+    # encoders.encode_base64(part)
+    # part.add_header('Content-Disposition', 'attachment; filename="%s"' % os.path.basename("birthday_vid.mp4"))
+    # message.attach(part)
+
+    #login to server and send email
     try:
         server = smtplib.SMTP(smtp_server, port)
         server.ehlo()  # To identify yourself to the server, .helo() (SMTP) or .ehlo() (ESMTP) should be called
