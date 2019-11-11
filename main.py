@@ -32,7 +32,7 @@ for j in range(len(readContent)):
         # send_sms.sendPostRequest(str(mobile), fname)     #send sms
         # send_mail.mail("rajp8340@gmail.com", fname)       #send mail
         # whatsapp_msg.send_msg(whatapp_contact_list, fname)     #whatsapp message
-        fb_msg.send_msg(fname, lname, whatapp_contact_list)
+        # fb_msg.send_msg(fname, lname, whatapp_contact_list)
     else:
         print("Unable to access DOB")
 

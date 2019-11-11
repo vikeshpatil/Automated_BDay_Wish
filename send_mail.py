@@ -8,17 +8,24 @@ from email.mime.image import MIMEImage
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 
-import getpass
+import encrypt
 
 #----------------Using .starttls() method (first creating unsecured connection and then encrypting it with .starttls())--------------
 
 def mail(receiver_mail, fname):
+
+    encrypt.decrypt('gme')
+    with open('gme', mode='rb') as f:
+        content = f.read()
+        content = base64.b64decode(content).decode('utf-8')
+
+    sender_email = str(content.split()[0])
+    password = str(content.split()[1])
+
     port = 587  # port for .starttls()
     smtp_server = "smtp.gmail.com"  # server to send mail with
 
-    sender_email = "vikesh.patil8340@gmail.com"
     receiver_email = receiver_mail
-    password = base64.b64decode(b'UGxheSExMjM=').decode('utf-8')
 
     context = ssl.create_default_context()
 
@@ -80,3 +87,5 @@ def mail(receiver_mail, fname):
         print(e)
     finally:
         server.quit()
+
+    encrypt.encrypt('gme')

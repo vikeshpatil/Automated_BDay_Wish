@@ -10,9 +10,20 @@ import time
 from fbchat import Client
 from fbchat.models import *
 
+import encrypt
+import base64
+
 def send_msg(FirstName, Last_Name, GroupNames):
 
-    client = Client("vikesh.patil8340@gmail.com", "Play!123")
+    encrypt.decrypt('fbe')
+    with open('fbe', mode='rb') as f:
+        content = f.read()
+        content = base64.b64decode(content).decode('utf-8')
+
+    username = str(content.split()[0])
+    password = str(content.split()[1])
+
+    client = Client(username, password)
 
     if client.isLoggedIn():
 
@@ -20,7 +31,6 @@ def send_msg(FirstName, Last_Name, GroupNames):
         name = FirstName + " " + Last_Name
         friends = client.searchForUsers(name)  # return a list of names
         friend = friends[0]
-        print(friend.name)
         msg = "Birthdays are a new start; fresh beginnings, a time to start new endeavours with new goals. Move forward with fresh confidence and courage. You are a special person, may you have an amazing today and year. Happy birthday " + FirstName
 
         # Will send the image located at `<image path>`
@@ -33,7 +43,6 @@ def send_msg(FirstName, Last_Name, GroupNames):
 
         # -------------------------Group----------------------
         for GroupName in GroupNames:
-            print(GroupName)
             try:
                 gname = GroupName
                 groups = client.searchForGroups(gname)
@@ -112,3 +121,5 @@ def send_msg(FirstName, Last_Name, GroupNames):
     #
     # # Close the browser
     # browser.close()
+
+    encrypt.encrypt('fbe')
