@@ -98,7 +98,7 @@ def FB_save():
         username_n_pass_en = base64.b64encode(username_n_pass.encode('utf-8'))
 
         # Open file in write mode
-        file = open('fbe', "w")
+        file = open('./credentials/fbe', "w")
 
         # write username and password information into file
         file.write(username_n_pass_en.decode('utf-8'))
@@ -115,7 +115,6 @@ def FB_save():
         successfull = True
     if successfull:
         Label(FB_login_screen, text="Details Saved Successfully. You can close Window", fg="green", font=("calibri", 13)).pack()
-
         FB_login_screen.destroy()
     else:
         Label(FB_login_screen, text="Password Do Not Match", fg="red", font=("calibri", 13)).pack()
@@ -189,7 +188,7 @@ def Gmail_save():
         username_n_pass_en = base64.b64encode(username_n_pass.encode('utf-8'))
 
         # Open file in write mode
-        file = open('gme', "w")
+        file = open('./credentials/gme', "w")
 
         # write username and password information into file
         file.write(username_n_pass_en.decode('utf-8'))
@@ -277,7 +276,7 @@ def Sms_save():
     combineKeys = SmsApiKey + " " + SmsSecreteKey + " " + SmsMobileNum
     combineKeys_en = base64.b64encode(combineKeys.encode('utf-8'))
     # Open file in write mode
-    file = open('se', "w")
+    file = open('./credentials/se', "w")
     # write username and password information into file
     file.write(combineKeys_en.decode('utf-8'))
     file.close()

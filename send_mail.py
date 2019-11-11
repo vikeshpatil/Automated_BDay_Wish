@@ -14,8 +14,8 @@ import encrypt
 
 def mail(receiver_mail, fname):
 
-    encrypt.decrypt('gme')
-    with open('gme', mode='rb') as f:
+    encrypt.decrypt('./credentials/gme')
+    with open('./credentials/gme', mode='rb') as f:
         content = f.read()
         content = base64.b64decode(content).decode('utf-8')
 
@@ -88,4 +88,4 @@ def mail(receiver_mail, fname):
     finally:
         server.quit()
 
-    encrypt.encrypt('gme')
+    encrypt.encrypt('./credentials/gme')
