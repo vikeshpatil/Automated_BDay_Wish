@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb386794-4077-4aae-80e7-8abfc38baba4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SaveData.py" beforeDir="false" afterPath="$PROJECT_DIR$/SaveData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/encrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/encrypt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fb_msg.py" beforeDir="false" afterPath="$PROJECT_DIR$/fb_msg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fbe.aes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gme.aes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui_registration.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/se.aes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/send_mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/send_mail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/send_sms.py" beforeDir="false" afterPath="$PROJECT_DIR$/send_sms.py" afterDir="false" />
-    </list>
+    <list default="true" id="fb386794-4077-4aae-80e7-8abfc38baba4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +201,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.save_credentials">
+  <component name="RunManager" selected="Python.save_data">
     <configuration name="SaveData" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Automated_BDay_Wish" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -321,8 +309,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.save_credentials" />
         <item itemvalue="Python.save_data" />
+        <item itemvalue="Python.save_credentials" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.save_excel" />
         <item itemvalue="Python.SaveData" />
