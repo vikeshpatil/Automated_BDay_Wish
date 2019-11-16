@@ -1,11 +1,17 @@
+#! python3
 # import openpyxl and tkinter modules
 from openpyxl import load_workbook, Workbook
 from tkinter import *
 import csv
+import os
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+if not os.path.exists(dir_path + '/credentials/'):
+    os.mkdir(dir_path + '/credentials')
 
 try:
-    wb = load_workbook('./credentials/excel.xlsx')
+    wb = load_workbook(dir_path + '/credentials/excel.xlsx')
 except:
     wb = Workbook()
 
@@ -120,7 +126,7 @@ def insert():
         sheet.cell(row=current_row + 1, column=7).value = fgroup_field.get()
 
         # save the file
-        wb.save('./credentials/excel.xlsx')
+        wb.save(dir_path + '/credentials/excel.xlsx')
 
         esave_pop = Label(root, text="Details Saved in Excel File Successfully.", fg="Black", bg="light green", font=("calibri", 13))
         esave_pop.grid(row=13, column=1)
@@ -132,7 +138,7 @@ def save_txt():
 
     global tsave_pop
 
-    with open('./credentials/text.txt', 'a') as f:
+    with open(dir_path + '/credentials/text.txt', 'a') as f:
 
         wgroup_name = str(wgroup_field.get()).split()
         wgroup_name = '_'.join(wgroup_name)
@@ -150,7 +156,7 @@ def save_txt():
 # -----------------------CSV File-----------------------
 def save_csv():
     global csave_pop
-    with open('./credentials/csv.csv', mode='a') as f:
+    with open(dir_path + '/credentials/csv.csv', mode='a') as f:
         # fieldNames = ['First Name', 'Last Name', 'Mobile Number', 'Email', 'Date Of Birth', 'Whatsapp Group', 'Facebook Group']
 
         wgroup_name = str(wgroup_field.get()).split()

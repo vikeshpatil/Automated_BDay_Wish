@@ -1,13 +1,18 @@
+#! python3
+
 import requests
 
 import encrypt
 import base64
 
+import os
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
 # get request
 def sendPostRequest(phoneNo, fname):
 
-    encrypt.decrypt('./credentials/se')
-    with open('./credentials/se', mode='rb') as f:
+    encrypt.decrypt(dir_path + '/credentials/se')
+    with open(dir_path + '/credentials/se', mode='rb') as f:
         content = f.read()
         content = base64.b64decode(content).decode('utf-8')
 
@@ -24,7 +29,7 @@ def sendPostRequest(phoneNo, fname):
         'message': "Birthdays are a new start; fresh beginnings, a time to start new endeavours with new goals. Move forward with fresh confidence and courage. You are a special person, may you have an amazing today and year. Happy birthday" + fname,
         'senderid': SenderId
   }
-    encrypt.encrypt('./credentials/se')
+    encrypt.encrypt(dir_path + '/credentials/se')
     return requests.post(reqUrl, req_params)
 #   response = sendPostRequest('send to', 'message')
 

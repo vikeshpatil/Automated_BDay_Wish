@@ -1,3 +1,5 @@
+#! python3
+
 import smtplib, ssl
 import base64
 
@@ -10,12 +12,15 @@ from email.mime.multipart import MIMEMultipart
 
 import encrypt
 
+import os
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
 #----------------Using .starttls() method (first creating unsecured connection and then encrypting it with .starttls())--------------
 
 def mail(receiver_mail, fname):
 
-    encrypt.decrypt('./credentials/gme')
-    with open('./credentials/gme', mode='rb') as f:
+    encrypt.decrypt(dir_path + '/credentials/gme')
+    with open(dir_path + '/credentials/gme', mode='rb') as f:
         content = f.read()
         content = base64.b64decode(content).decode('utf-8')
 
@@ -59,14 +64,14 @@ def mail(receiver_mail, fname):
     message.attach(MIMEText(html, 'html'))
 
     # ---------------Sending image-------------
-    # img_open = open('birthdaypic.jpg', 'rb')
+    # img_open = open(dir_path + 'birthdaypic.jpg', 'rb')
     # img = MIMEImage(img_open.read())
     # img_open.close()
     # message.attach(img)
 
 #------------------------Attaching Video------------------
     # part = MIMEBase('application', "octet-stream")
-    # fo = open('birthday_vid.mp4', "rb")
+    # fo = open(dir_path + 'birthday_vid.mp4', "rb")
     # part.set_payload(fo.read())
     # encoders.encode_base64(part)
     # part.add_header('Content-Disposition', 'attachment; filename="%s"' % os.path.basename("birthday_vid.mp4"))
@@ -88,4 +93,4 @@ def mail(receiver_mail, fname):
     finally:
         server.quit()
 
-    encrypt.encrypt('./credentials/gme')
+    encrypt.encrypt(dir_path + '/credentials/gme')

@@ -1,10 +1,15 @@
+#! python3
 # For reference visit   https://www.simplifiedpython.net/python-gui-login/
 
 
 from tkinter import *
 import base64
-import time
 import encrypt
+import os
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+if not os.path.exists(dir_path + '/credentials/'):
+    os.mkdir(dir_path + '/credentials')
 
 buffersize = 64 *1024   #encryption or decryption buffer size
 
@@ -98,13 +103,13 @@ def FB_save():
         username_n_pass_en = base64.b64encode(username_n_pass.encode('utf-8'))
 
         # Open file in write mode
-        file = open('./credentials/fbe', "w")
+        file = open(dir_path + '/credentials/se', "w")
 
         # write username and password information into file
         file.write(username_n_pass_en.decode('utf-8'))
         file.close()
 
-        encrypt.encrypt('fbe')      #encryot the file
+        encrypt.encrypt(dir_path + '/credentials/se')      #encryot the file
 
         fbusername_entry.delete(0, END)
         fbpassword_entry.delete(0, END)
@@ -188,13 +193,13 @@ def Gmail_save():
         username_n_pass_en = base64.b64encode(username_n_pass.encode('utf-8'))
 
         # Open file in write mode
-        file = open('./credentials/gme', "w")
+        file = open(dir_path + '/credentials/gme', "w")
 
         # write username and password information into file
         file.write(username_n_pass_en.decode('utf-8'))
         file.close()
 
-        encrypt.encrypt('gme')
+        encrypt.encrypt(dir_path + '/credentials/gme')
 
         Gmailusername_entry.delete(0, END)
         Gmailpassword_entry.delete(0, END)
@@ -276,12 +281,12 @@ def Sms_save():
     combineKeys = SmsApiKey + " " + SmsSecreteKey + " " + SmsMobileNum
     combineKeys_en = base64.b64encode(combineKeys.encode('utf-8'))
     # Open file in write mode
-    file = open('./credentials/se', "w")
+    file = open(dir_path + '/credentials/se', "w")
     # write username and password information into file
     file.write(combineKeys_en.decode('utf-8'))
     file.close()
 
-    encrypt.encrypt('se')
+    encrypt.encrypt(dir_path + '/credentials/se')
 
     SmsApi_entry.delete(0, END)
     SmsSecrete_entry.delete(0, END)

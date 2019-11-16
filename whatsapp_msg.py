@@ -1,14 +1,20 @@
+#! python3
+
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+
 import time
+
+import os
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
 def send_msg(names, fname):
 
     # Replace below path with the absolute path
     # to chromedriver in your computer
-    driver = webdriver.Chrome('./chromedriver')
+    driver = webdriver.Chrome(dir_path + '/chromedriver')
 
     driver.get("https://web.whatsapp.com/")
     wait = WebDriverWait(driver, 600)
