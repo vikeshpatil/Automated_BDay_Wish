@@ -1,1 +1,0 @@
-reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run" /v Automated_Birthday /t REG_SZ /d E:\Documents\Python\Projects\Automated_BDay_Wish\AutomatedBirthday.bat

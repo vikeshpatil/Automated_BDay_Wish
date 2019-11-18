@@ -35,14 +35,18 @@ def read_txt():
 
                 whatapp_contact_list.append(whatapp_name)
 
-            print("Happy B'day " + name + " . Your mobile numbe is " + mobile + ". And your email is " + email )
-            # send_sms.sendPostRequest(str(mobile), fname)     #send sms
-            # send_mail.mail("rajp8340@gmail.com", fname)       #send mail
+            print("It's " + fname +"'s Happy B'day ")
+            print('Sending SMS ...')
+            send_sms.sendPostRequest(str(mobile), fname)     #send sms
+            print('Sending mail ...')
+            send_mail.mail(email, fname)       #send mail
+            print('Sending wish on whatsapp ...')
             whatsapp_msg.send_msg(whatapp_contact_list, fname)     #whatsapp message
-            # fb_msg.send_msg(fname, lname, whatapp_contact_list)
+            print('Sending wish on facebook ...')
+            fb_msg.send_msg(fname, lname, whatapp_contact_list)   #facebook message
 
         else:
-            print("Unable to access DOB")
+            print('No one have birthday today :(')
 
 
 # -----------------------CSV File Reading----------------------
@@ -68,22 +72,27 @@ def read_csv():
 
                         whatapp_contact_list.append(whatapp_name)
 
-                    print("Happy B'day " + name + " . Your mobile numbe is " + mobile + ". And your email is " + email )
-                    # send_sms.sendPostRequest(str(mobile), fname)     #send sms
-                    # send_mail.mail("rajp8340@gmail.com", fname)       #send mail
-                    # whatsapp_msg.send_msg(whatapp_contact_list, fname)     #whatsapp message
-                    # fb_msg.send_msg(fname, lname, whatapp_contact_list)
+                    print("It's " + fname + "'s Happy B'day ")
+                    print('Sending SMS ...')
+                    send_sms.sendPostRequest(str(mobile), fname)     #send sms
+                    print('Sending mail ...')
+                    send_mail.mail(email, fname)       #send mail
+                    print('Sending wish on whatsapp ...')
+                    whatsapp_msg.send_msg(whatapp_contact_list, fname)  # whatsapp message
+                    print('Sending wish on facebook ...')
+                    fb_msg.send_msg(fname, lname, whatapp_contact_list)   #facebook message
             except:
-                print('Not Birthday')
+                print('No one have birthday today :(')
 
 # ---------------------Excel Reading----------------------
 
 def read_excel():
     wb = load_workbook(dir_path + '/credentials/excel.xlsx')
     ws = wb.active
-
+    print('Reading excel')
     for row in ws.iter_rows(min_row=2, values_only=True):
         try:
+
             if(row[4]==str(today)):
                 fname = row[0]
                 lname = row[1]
@@ -98,19 +107,23 @@ def read_excel():
 
                     whatapp_contact_list.append(whatapp_name)
 
-                print("Happy B'day " + name + " . Your mobile numbe is " + mobile + ". And your email is " + email)
-                # send_sms.sendPostRequest(str(mobile), fname)     #send sms
-                # send_mail.mail("rajp8340@gmail.com", fname)       #send mail
-                # whatsapp_msg.send_msg(whatapp_contact_list, fname)     #whatsapp message
-                # fb_msg.send_msg(fname, lname, whatapp_contact_list)
+                print("It's " + fname + "'s Happy B'day ")
+                print('Sending SMS ...')
+                send_sms.sendPostRequest(str(mobile), fname)     #send sms
+                print('Sending mail ...')
+                send_mail.mail(email, fname)       #send mail
+                print('Sending wish on whatsapp ...')
+                whatsapp_msg.send_msg(whatapp_contact_list, fname)  # whatsapp message
+                print('Sending wish on facebook ...')
+                fb_msg.send_msg(fname, lname, whatapp_contact_list)   #facebook message
         except:
-            print('Not Birthday')
+            print('No one have birthday today :(')
 
 
 if os.path.exists(dir_path + '/log.txt'):
     if not log.log_read():
         log.log_write()
-        read_txt()  #method to read data
+        read_excel()  #method to read data
 else:
     log.log_write()
-    read_txt()      #method to read data
+    read_excel()      #method to read data

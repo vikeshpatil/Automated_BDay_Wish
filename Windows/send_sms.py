@@ -1,7 +1,6 @@
 #! python3
 
 import requests
-
 import encrypt
 import base64
 
@@ -22,9 +21,9 @@ def sendPostRequest(phoneNo, fname):
 
     reqUrl = 'https://www.way2sms.com/api/v1/sendCampaign'
     req_params = {
-        'apikey': ApiKey,  #replcae with original api key
-        'secret': SecreteKey,   #replace with original secrete key
-        'usetype':'stage',        #replace with prod during production stage
+        'apikey': ApiKey,
+        'secret': SecreteKey,
+        'usetype': 'prod',
         'phone': phoneNo,
         'message': "Birthdays are a new start; fresh beginnings, a time to start new endeavours with new goals. Move forward with fresh confidence and courage. You are a special person, may you have an amazing today and year. Happy birthday" + fname,
         'senderid': SenderId

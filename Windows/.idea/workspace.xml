@@ -2,44 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb386794-4077-4aae-80e7-8abfc38baba4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Automated_BDay_Wish.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Add Contact.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutomatedBirthday.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Registration.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/birthday_vid.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/birthdaypic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/contacts.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/credentials/csv.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/credentials/excel.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/credentials/fbe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/credentials/fbe.aes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/credentials/text.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/encrypt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fb_msg.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/save_credentials.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/save_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/send_mail.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/send_sms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/activate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/activate.csh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/activate.fish" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/python" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/python3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/bin/python3.7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/lib64" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/pyvenv.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/whatsapp_msg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/Automated_BDay_Wish.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Add Contact.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AutomatedBirthday.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Registration.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../birthday_vid.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../birthdaypic.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contacts.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../credentials/csv.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../credentials/excel.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../credentials/fbe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../credentials/fbe.aes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../credentials/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../encrypt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fb_msg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../log.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../run.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../save_credentials.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../save_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../send_mail.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../send_sms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../setup.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/bin/activate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/bin/activate.csh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/bin/activate.fish" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/bin/python" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/bin/python3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/bin/python3.7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/lib64" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../venv/pyvenv.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../whatsapp_msg.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +61,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1TeckKXLj1FzBqrp61E6zNVRhoM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
