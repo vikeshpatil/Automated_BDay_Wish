@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb386794-4077-4aae-80e7-8abfc38baba4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AutomatedBirthday.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Add Contact.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Registration.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/credentials/excel.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/credentials/excel.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/encrypt.py" beforeDir="false" afterPath="$PROJECT_DIR$/encrypt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaveData.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/fb_msg.py" beforeDir="false" afterPath="$PROJECT_DIR$/fb_msg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/save_credentials.py" beforeDir="false" afterPath="$PROJECT_DIR$/save_credentials.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/save_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/save_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/send_mail.py" beforeDir="false" afterPath="$PROJECT_DIR$/send_mail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/send_sms.py" beforeDir="false" afterPath="$PROJECT_DIR$/send_sms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whatsapp_msg.py" beforeDir="false" afterPath="$PROJECT_DIR$/whatsapp_msg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.bat" beforeDir="false" afterPath="$PROJECT_DIR$/setup.bat" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
