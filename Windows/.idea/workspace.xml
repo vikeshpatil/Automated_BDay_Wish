@@ -1,46 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb386794-4077-4aae-80e7-8abfc38baba4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/Automated_BDay_Wish.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Add Contact.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../AutomatedBirthday.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Registration.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../birthday_vid.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../birthdaypic.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../contacts.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../credentials/csv.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../credentials/excel.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../credentials/fbe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../credentials/fbe.aes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../credentials/text.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../encrypt.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fb_msg.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../log.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../log.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../run.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../save_credentials.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../save_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../send_mail.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../send_sms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../setup.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../setup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/bin/activate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/bin/activate.csh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/bin/activate.fish" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/bin/python" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/bin/python3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/bin/python3.7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/lib64" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../venv/pyvenv.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../whatsapp_msg.py" beforeDir="false" />
-    </list>
+    <list default="true" id="fb386794-4077-4aae-80e7-8abfc38baba4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +33,12 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Documents\Python\Projects\Automated_BDay_Wish\Windows\Data" />
+      <recent name="E:\Documents\Python\Projects\Automated_BDay_Wish\Windows" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -85,48 +52,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="encrypt" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Automated_BDay_Wish" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/encrypt.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="log" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Automated_BDay_Wish" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/log.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Automated_BDay_Wish" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,7 +73,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="save_credentials" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="save_credentials (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Automated_BDay_Wish" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -160,7 +85,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/save_credentials.py" />
+      <option name="SCRIPT_NAME" value="E:\Documents\Python\Projects\Automated_BDay_Wish\Windows\save_credentials.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -169,7 +94,49 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="save_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="save_credentials" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Automated_BDay_Wish" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="E:\Documents\Python\Projects\Automated_BDay_Wish\Windows\save_credentials.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="send_mail (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Automated_BDay_Wish" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Data/send_mail.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="send_mail" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Automated_BDay_Wish" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -181,7 +148,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/save_data.py" />
+      <option name="SCRIPT_NAME" value="E:\Documents\Python\Projects\Automated_BDay_Wish\Windows\Data\send_mail.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -193,10 +160,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.log" />
-        <item itemvalue="Python.encrypt" />
-        <item itemvalue="Python.save_data" />
+        <item itemvalue="Python.send_mail (1)" />
+        <item itemvalue="Python.save_credentials (1)" />
         <item itemvalue="Python.save_credentials" />
+        <item itemvalue="Python.send_mail" />
       </list>
     </recent_temporary>
   </component>

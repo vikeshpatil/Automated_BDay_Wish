@@ -1,10 +1,6 @@
 #! python3
 import datetime
-import log
-import send_sms
-import send_mail
-import whatsapp_msg
-import fb_msg
+from Data import send_mail, log, send_sms, whatsapp_msg, fb_msg
 
 import os
 dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -12,12 +8,13 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 import csv
 from openpyxl import load_workbook
 
+import time
 
 today = datetime.date.today()
 #------------- Reading data in text file----------------------#
 def read_txt():
 
-    with open(dir_path + '/credentials/text.txt', mode='r') as f:
+    with open(dir_path + '/Data/credentials/text.txt', mode='r') as f:
         readContent = f.readlines()
     for j in range(len(readContent)):
         if(readContent[j].split()[4] == str(today)):
@@ -35,15 +32,23 @@ def read_txt():
 
                 whatapp_contact_list.append(whatapp_name)
 
-            print("It's " + fname +"'s Happy B'day ")
+            print("It's " + fname + "'s Happy B'day ")
+
             print('Sending SMS ...')
-            send_sms.sendPostRequest(str(mobile), fname)     #send sms
+            send_sms.sendPostRequest(str(mobile), fname)  # send sms
+            print('Sms sent.')
+
             print('Sending mail ...')
-            send_mail.mail(email, fname)       #send mail
-            print('Sending wish on whatsapp ...')
-            whatsapp_msg.send_msg(whatapp_contact_list, fname)     #whatsapp message
+            send_mail.mail(email, fname)  # send mail
+            print('Mail sent.')
+
             print('Sending wish on facebook ...')
-            fb_msg.send_msg(fname, lname, whatapp_contact_list)   #facebook message
+            fb_msg.send_msg(fname, lname, whatapp_contact_list)  # facebook message
+            print('Facebook message sent.')
+
+            print('Sending wish on whatsapp ...')
+            whatsapp_msg.send_msg(whatapp_contact_list, fname)  # whatsapp message
+            print('Whatsapp message sent.')
 
         else:
             print('No one have birthday today :(')
@@ -53,7 +58,7 @@ def read_txt():
 
 def read_csv():
 
-    with open(dir_path + '/credentials/csv.csv') as f:
+    with open(dir_path + '/Data/credentials/csv.csv') as f:
         reader = csv.reader(f, delimiter=',')
 
         for row in reader:
@@ -73,22 +78,32 @@ def read_csv():
                         whatapp_contact_list.append(whatapp_name)
 
                     print("It's " + fname + "'s Happy B'day ")
+
                     print('Sending SMS ...')
-                    send_sms.sendPostRequest(str(mobile), fname)     #send sms
+                    send_sms.sendPostRequest(str(mobile), fname)  # send sms
+                    print('Sms sent.')
+
                     print('Sending mail ...')
-                    send_mail.mail(email, fname)       #send mail
+                    send_mail.mail(email, fname)  # send mail
+                    print('Mail sent.')
+
+                    print('Sending wish on facebook ...')
+                    fb_msg.send_msg(fname, lname, whatapp_contact_list)  # facebook message
+                    print('Facebook message sent.')
+
                     print('Sending wish on whatsapp ...')
                     whatsapp_msg.send_msg(whatapp_contact_list, fname)  # whatsapp message
-                    print('Sending wish on facebook ...')
-                    fb_msg.send_msg(fname, lname, whatapp_contact_list)   #facebook message
+                    print('Whatsapp message sent.')
+
             except:
                 print('No one have birthday today :(')
 
 # ---------------------Excel Reading----------------------
 
 def read_excel():
-    wb = load_workbook(dir_path + '/credentials/excel.xlsx')
+    wb = load_workbook(dir_path + '/Data/credentials/excel.xlsx')
     ws = wb.active
+
     print('Reading excel')
     for row in ws.iter_rows(min_row=2, values_only=True):
         try:
@@ -108,19 +123,29 @@ def read_excel():
                     whatapp_contact_list.append(whatapp_name)
 
                 print("It's " + fname + "'s Happy B'day ")
-                print('Sending SMS ...')
-                send_sms.sendPostRequest(str(mobile), fname)     #send sms
+                # print('Sending SMS ...')
+                # send_sms.sendPostRequest(str(mobile), fname)     #send sms
+                # print('Sms sent.')
+
                 print('Sending mail ...')
-                send_mail.mail(email, fname)       #send mail
+                # send_mail.mail(email, fname)       #send mail
+                print('Mail sent.')
+
+                print('Sending wish on facebook ...')
+                # fb_msg.send_msg(fname, lname, whatapp_contact_list)  # facebook message
+                print('Facebook message sent.')
+
                 print('Sending wish on whatsapp ...')
                 whatsapp_msg.send_msg(whatapp_contact_list, fname)  # whatsapp message
-                print('Sending wish on facebook ...')
-                fb_msg.send_msg(fname, lname, whatapp_contact_list)   #facebook message
+                print('Whatsapp message sent.')
+
+
         except:
-            print('No one have birthday today :(')
+            print('Done Scanning Birthdays')
 
+# time.sleep(10)
 
-if os.path.exists(dir_path + '/log.txt'):
+if os.path.exists(dir_path + '/Data/log.txt'):
     if not log.log_read():
         log.log_write()
         read_excel()  #method to read data

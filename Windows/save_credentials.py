@@ -4,12 +4,13 @@
 
 from tkinter import *
 import base64
-import encrypt
+from Data import encrypt
+
 import os
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-if not os.path.exists(dir_path + '/credentials/'):
-    os.mkdir(dir_path + '/credentials')
+if not os.path.exists(dir_path + '/Data/credentials/'):
+    os.mkdir(dir_path + '/Data/credentials')
 
 buffersize = 64 *1024   #encryption or decryption buffer size
 
@@ -21,7 +22,7 @@ def main_account_screen():
     main_screen.title("Save Details")  # set the title of GUI window
 
 
-    Label(text="Choose option to save details", bg="white", width="300", height="2", font=("Calibri", 15)).pack()
+    Label(text="Choose option to save details", bg="white", fg="black", width="300", height="2", font=("Calibri", 15)).pack()
     Label(text="").pack()
 
     Button(text="Facebook Login Details", height="2", width="30", command=FB_login).pack()
@@ -55,7 +56,7 @@ def FB_login():
     fbconfirm_pass = StringVar()
 
     # Set label for user's instruction
-    Label(FB_login_screen, text="Please enter details Facebook", bg="white", width="300", height="2", font=("Calibri", 15)).pack()
+    Label(FB_login_screen, text="Please enter your Facebook datails", bg="white", fg="black", width="300", height="2", font=("Calibri", 15)).pack()
     Label(FB_login_screen, text="").pack()
 
     # Set username label
@@ -103,13 +104,13 @@ def FB_save():
         username_n_pass_en = base64.b64encode(username_n_pass.encode('utf-8'))
 
         # Open file in write mode
-        file = open(dir_path + '/credentials/se', "w")
+        file = open(dir_path + '/Data/credentials/fbe', "w")
 
         # write username and password information into file
         file.write(username_n_pass_en.decode('utf-8'))
         file.close()
 
-        encrypt.encrypt(dir_path + '/credentials/se')      #encryot the file
+        encrypt.encrypt(dir_path + '/Data/credentials/fbe')      #encryot the file
 
         fbusername_entry.delete(0, END)
         fbpassword_entry.delete(0, END)
@@ -146,11 +147,11 @@ def Gmail_login():
     Gmailconfirm_pass = StringVar()
 
     # Set label for user's instruction
-    Label(Gmail_login_screen, text="Please enter details for Gmail", bg="white", width="300", height="2", font=("Calibri", 15)).pack()
+    Label(Gmail_login_screen, text="Please enter your Gmail details", bg="white", fg="black", width="300", height="2", font=("Calibri", 15)).pack()
     Label(Gmail_login_screen, text="").pack()
 
     # Set username label
-    username_lable = Label(Gmail_login_screen , height="2", width="30",text="Username * ")
+    username_lable = Label(Gmail_login_screen , height="2", width="30",text="Email * ")
     username_lable.pack()
 
     # Set username entry
@@ -193,13 +194,13 @@ def Gmail_save():
         username_n_pass_en = base64.b64encode(username_n_pass.encode('utf-8'))
 
         # Open file in write mode
-        file = open(dir_path + '/credentials/gme', "w")
+        file = open(dir_path + '/Data/credentials/gme', "w")
 
         # write username and password information into file
         file.write(username_n_pass_en.decode('utf-8'))
         file.close()
 
-        encrypt.encrypt(dir_path + '/credentials/gme')
+        encrypt.encrypt(dir_path + '/Data/credentials/gme')
 
         Gmailusername_entry.delete(0, END)
         Gmailpassword_entry.delete(0, END)
@@ -237,7 +238,7 @@ def Sms_details():
     SmsMobile = StringVar()
 
     # Set label for user's instruction
-    Label(Sms_details_screen, text="Please enter Api and Secrete Key From Your Way2Sms Profile", bg="white", width="300", height="2", font=("Calibri", 15)).pack()
+    Label(Sms_details_screen, text="Please enter Api and Secrete Key From Your Way2Sms Profile", fg="black", bg="white", width="300", height="2", font=("Calibri", 15)).pack()
     Label(Sms_details_screen, text="").pack()
 
     # Set username label
@@ -281,12 +282,12 @@ def Sms_save():
     combineKeys = SmsApiKey + " " + SmsSecreteKey + " " + SmsMobileNum
     combineKeys_en = base64.b64encode(combineKeys.encode('utf-8'))
     # Open file in write mode
-    file = open(dir_path + '/credentials/se', "w")
+    file = open(dir_path + '/Data/credentials/se', "w")
     # write username and password information into file
     file.write(combineKeys_en.decode('utf-8'))
     file.close()
 
-    encrypt.encrypt(dir_path + '/credentials/se')
+    encrypt.encrypt(dir_path + '/Data/credentials/se')
 
     SmsApi_entry.delete(0, END)
     SmsSecrete_entry.delete(0, END)

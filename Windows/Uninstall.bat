@@ -1,0 +1,1 @@
+REG DELETE "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run" /v Automated_Birthday /f
