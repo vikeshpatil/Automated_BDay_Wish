@@ -123,16 +123,16 @@ def read_excel():
                     whatapp_contact_list.append(whatapp_name)
 
                 print("It's " + fname + "'s Happy B'day ")
-                # print('Sending SMS ...')
-                # send_sms.sendPostRequest(str(mobile), fname)     #send sms
-                # print('Sms sent.')
+                print('Sending SMS ...')
+                send_sms.sendPostRequest(str(mobile), fname)     #send sms
+                print('Sms sent.')
 
                 print('Sending mail ...')
-                # send_mail.mail(email, fname)       #send mail
+                send_mail.mail(email, fname)       #send mail
                 print('Mail sent.')
 
                 print('Sending wish on facebook ...')
-                # fb_msg.send_msg(fname, lname, whatapp_contact_list)  # facebook message
+                fb_msg.send_msg(fname, lname, whatapp_contact_list)  # facebook message
                 print('Facebook message sent.')
 
                 print('Sending wish on whatsapp ...')
