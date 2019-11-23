@@ -143,7 +143,7 @@ def read_excel():
         except:
             print('Done Scanning Birthdays')
 
-# time.sleep(10)
+time.sleep(10)
 
 if os.path.exists(dir_path + '/Data/log.txt'):
     if not log.log_read():
