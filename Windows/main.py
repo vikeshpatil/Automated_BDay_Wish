@@ -33,22 +33,33 @@ def read_txt():
                 whatapp_contact_list.append(whatapp_name)
 
             print("It's " + fname + "'s Happy B'day ")
+            try:
+                print('Sending SMS ...')
+                send_sms.sendPostRequest(str(mobile), fname)  # send sms
+                print('Sms sent.')
+            except:
+                print('Unable to send Sms.')
 
-            print('Sending SMS ...')
-            send_sms.sendPostRequest(str(mobile), fname)  # send sms
-            print('Sms sent.')
+            try:
+                print('Sending mail ...')
+                send_mail.mail(email, fname)  # send mail
+                print('Mail sent.')
+            except:
+                print('Unable to send mail')
 
-            print('Sending mail ...')
-            send_mail.mail(email, fname)  # send mail
-            print('Mail sent.')
+            try:
+                print('Sending wish on facebook ...')
+                fb_msg.send_msg(fname, lname, whatapp_contact_list)  # facebook message
+                print('Facebook message sent.')
+            except:
+                print('Unable to send Facebook message')
 
-            print('Sending wish on facebook ...')
-            fb_msg.send_msg(fname, lname, whatapp_contact_list)  # facebook message
-            print('Facebook message sent.')
-
-            print('Sending wish on whatsapp ...')
-            whatsapp_msg.send_msg(whatapp_contact_list, fname)  # whatsapp message
-            print('Whatsapp message sent.')
+            try:
+                print('Sending wish on whatsapp ...')
+                whatsapp_msg.send_msg(whatapp_contact_list, fname)  # whatsapp message
+                print('Whatsapp message sent.')
+            except:
+                print('Unable to send Whatsapp message')
 
         else:
             print('No one have birthday today :(')
@@ -78,22 +89,33 @@ def read_csv():
                         whatapp_contact_list.append(whatapp_name)
 
                     print("It's " + fname + "'s Happy B'day ")
+                    try:
+                        print('Sending SMS ...')
+                        send_sms.sendPostRequest(str(mobile), fname)  # send sms
+                        print('Sms sent.')
+                    except:
+                        print('Unable to send Sms.')
 
-                    print('Sending SMS ...')
-                    send_sms.sendPostRequest(str(mobile), fname)  # send sms
-                    print('Sms sent.')
+                    try:
+                        print('Sending mail ...')
+                        send_mail.mail(email, fname)  # send mail
+                        print('Mail sent.')
+                    except:
+                        print('Unable to send mail')
 
-                    print('Sending mail ...')
-                    send_mail.mail(email, fname)  # send mail
-                    print('Mail sent.')
+                    try:
+                        print('Sending wish on facebook ...')
+                        fb_msg.send_msg(fname, lname, whatapp_contact_list)  # facebook message
+                        print('Facebook message sent.')
+                    except:
+                        print('Unable to send Facebook message')
 
-                    print('Sending wish on facebook ...')
-                    fb_msg.send_msg(fname, lname, whatapp_contact_list)  # facebook message
-                    print('Facebook message sent.')
-
-                    print('Sending wish on whatsapp ...')
-                    whatsapp_msg.send_msg(whatapp_contact_list, fname)  # whatsapp message
-                    print('Whatsapp message sent.')
+                    try:
+                        print('Sending wish on whatsapp ...')
+                        whatsapp_msg.send_msg(whatapp_contact_list, fname)  # whatsapp message
+                        print('Whatsapp message sent.')
+                    except:
+                        print('Unable to send Whatsapp message')
 
             except:
                 print('No one have birthday today :(')
@@ -123,21 +145,33 @@ def read_excel():
                     whatapp_contact_list.append(whatapp_name)
 
                 print("It's " + fname + "'s Happy B'day ")
-                print('Sending SMS ...')
-                send_sms.sendPostRequest(str(mobile), fname)     #send sms
-                print('Sms sent.')
+                try:
+                    print('Sending SMS ...')
+                    send_sms.sendPostRequest(str(mobile), fname)     #send sms
+                    print('Sms sent.')
+                except:
+                    print('Unable to send Sms.')
 
-                print('Sending mail ...')
-                send_mail.mail(email, fname)       #send mail
-                print('Mail sent.')
+                try:
+                    print('Sending mail ...')
+                    send_mail.mail(email, fname)       #send mail
+                    print('Mail sent.')
+                except:
+                    print('Unable to send mail')
 
-                print('Sending wish on facebook ...')
-                fb_msg.send_msg(fname, lname, whatapp_contact_list)  # facebook message
-                print('Facebook message sent.')
+                try:
+                    print('Sending wish on facebook ...')
+                    fb_msg.send_msg(fname, lname, whatapp_contact_list)  # facebook message
+                    print('Facebook message sent.')
+                except:
+                    print('Unable to send Facebook message')
 
-                print('Sending wish on whatsapp ...')
-                whatsapp_msg.send_msg(whatapp_contact_list, fname)  # whatsapp message
-                print('Whatsapp message sent.')
+                try:
+                    print('Sending wish on whatsapp ...')
+                    whatsapp_msg.send_msg(whatapp_contact_list, fname)  # whatsapp message
+                    print('Whatsapp message sent.')
+                except:
+                    print('Unable to send Whatsapp message')
 
 
         except:
