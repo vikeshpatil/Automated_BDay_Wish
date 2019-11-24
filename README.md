@@ -29,11 +29,11 @@ To setup account for sms, we are using Fast2Sms service
 
 If all the above requirements are fulfilled then follow these steps:
 
-Step 1: Run Installation file for required platform (Windows/Linux)
+#### Step 1: Run Installation file for required platform (Windows/Linux)
 
-Step 2: Save the login credentials (Facebook, Gmail, Sms)
+#### Step 2: Save the login credentials (Facebook, Gmail, Sms)
 
-Step3: Add Person's details to whom have to send Birthday wish
+#### Step3: Add Person's details to whom have to send Birthday wish
 
 Read following instruction for specific platform
 <br><br>
