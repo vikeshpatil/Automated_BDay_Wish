@@ -9,7 +9,7 @@ import base64
 import os
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-# get request
+# Post request
 def sendPostRequest(phoneNo, fname):
 
     encrypt.decrypt(dir_path + '/credentials/se')
@@ -18,21 +18,17 @@ def sendPostRequest(phoneNo, fname):
         content = base64.b64decode(content).decode('utf-8')
 
     ApiKey = str(content.split()[0])
-    SecreteKey = str(content.split()[1])
-    SenderId = str(content.split()[2])
 
-    reqUrl = 'https://www.way2sms.com/api/v1/sendCampaign'
-    req_params = {
-        'apikey': ApiKey,
-        'secret': SecreteKey,
-        'usetype': 'prod',
-        'phone': phoneNo,
-        'message': "Birthdays are a new start; fresh beginnings, a time to start new endeavours with new goals. Move forward with fresh confidence and courage. You are a special person, may you have an amazing today and year. Happy birthday" + fname,
-        'senderid': SenderId
-  }
+    message = "Birthdays are a new start; fresh beginnings, a time to start new endeavours with new goals. Move forward with fresh confidence and courage. You are a special person, may you have an amazing today and year. Happy birthday " + fname
+    url = "https://www.fast2sms.com/dev/bulk"
+
+    payload = "sender_id=FSTSMS" + "&message=" + message + "&language=english&route=p&numbers=" + phoneNo
+    headers = {
+        'authorization': ApiKey,
+        'Content-Type': "application/x-www-form-urlencoded",
+        'Cache-Control': "no-cache",
+    }
     encrypt.encrypt(dir_path + '/credentials/se')
-    return requests.post(reqUrl, req_params)
-#   response = sendPostRequest('send to', 'message')
+    return requests.request("POST", url, data=payload, headers=headers)
 
-# print response if you want
-# print(response.text)
+    # print(response.text)

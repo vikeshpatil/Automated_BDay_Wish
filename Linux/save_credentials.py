@@ -1,10 +1,11 @@
-
+#! python3
 # For reference visit   https://www.simplifiedpython.net/python-gui-login/
 
 
 from tkinter import *
-from Data.encrypt import *
 import base64
+from Data import encrypt
+
 import os
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -21,7 +22,7 @@ def main_account_screen():
     main_screen.title("Save Details")  # set the title of GUI window
 
 
-    Label(text="Choose option to save details", bg="white", fg="black" ,width="300", height="2", font=("Calibri", 15)).pack()
+    Label(text="Choose option to save details", bg="white", fg="black", width="300", height="2", font=("Calibri", 15)).pack()
     Label(text="").pack()
 
     Button(text="Facebook Login Details", height="2", width="30", command=FB_login).pack()
@@ -55,7 +56,7 @@ def FB_login():
     fbconfirm_pass = StringVar()
 
     # Set label for user's instruction
-    Label(FB_login_screen, text="Please enter details Facebook", bg="white", fg="black", width="300", height="2", font=("Calibri", 15)).pack()
+    Label(FB_login_screen, text="Please enter your Facebook datails", bg="white", fg="black", width="300", height="2", font=("Calibri", 15)).pack()
     Label(FB_login_screen, text="").pack()
 
     # Set username label
@@ -109,7 +110,7 @@ def FB_save():
         file.write(username_n_pass_en.decode('utf-8'))
         file.close()
 
-        encrypt(dir_path + '/Data/credentials/fbe')      #encryot the file
+        encrypt.encrypt(dir_path + '/Data/credentials/fbe')      #encryot the file
 
         fbusername_entry.delete(0, END)
         fbpassword_entry.delete(0, END)
@@ -140,48 +141,37 @@ def Gmail_login():
     Gmail_login_screen .title("Register")
     Gmail_login_screen .geometry("500x350")
 
-    # Set text variables
     Gmailusername = StringVar()
     Gmailpassword = StringVar()
     Gmailconfirm_pass = StringVar()
 
-    # Set label for user's instruction
-    Label(Gmail_login_screen, text="Please enter details for Gmail", bg="white", fg="black", width="300", height="2", font=("Calibri", 15)).pack()
+    Label(Gmail_login_screen, text="Please enter your Gmail details", bg="white", fg="black", width="300", height="2", font=("Calibri", 15)).pack()
     Label(Gmail_login_screen, text="").pack()
 
-    # Set username label
     username_lable = Label(Gmail_login_screen , height="2", width="30",text="Email * ")
     username_lable.pack()
-
-    # Set username entry
-    # The Entry widget is a standard Tkinter widget used to enter or display a single line of text.
 
     Gmailusername_entry = Entry(Gmail_login_screen, width=30, textvariable=Gmailusername)
     Gmailusername_entry.pack(ipady=2)
 
-    # Set password label
     password_lable = Label(Gmail_login_screen , height="2", width="30", text="Password * ")
     password_lable.pack()
 
-    # Set password entry
     Gmailpassword_entry = Entry(Gmail_login_screen , width=30,textvariable=Gmailpassword, show='*')
     Gmailpassword_entry.pack(ipady=2)
 
-    # Set password label
     confirm_password_lable = Label(Gmail_login_screen, height="2", width="30", text="Confirm Password * ")
     confirm_password_lable.pack()
 
-    # Set password entry
     Gmailconfirm_password_entry = Entry(Gmail_login_screen,width=30, textvariable=Gmailconfirm_pass, show='*')
     Gmailconfirm_password_entry.pack(ipady=2)
 
     Label(Gmail_login_screen, text="").pack()
 
-    # Set register button
     Button(Gmail_login_screen , text="Save", width=20, height=2, bg="green", command=Gmail_save).pack()
 
 def Gmail_save():
-    # get username and password
+
     username_info = Gmailusername.get()
     password_info = Gmailpassword.get()
     confirm_pass_info = Gmailconfirm_pass.get()
@@ -192,20 +182,16 @@ def Gmail_save():
         username_n_pass = username_info + " " + password_info
         username_n_pass_en = base64.b64encode(username_n_pass.encode('utf-8'))
 
-        # Open file in write mode
         file = open(dir_path + '/Data/credentials/gme', "w")
 
-        # write username and password information into file
         file.write(username_n_pass_en.decode('utf-8'))
         file.close()
 
-        encrypt(dir_path + '/Data/credentials/gme')
+        encrypt.encrypt(dir_path + '/Data/credentials/gme')
 
         Gmailusername_entry.delete(0, END)
         Gmailpassword_entry.delete(0, END)
         Gmailconfirm_password_entry.delete(0, END)
-
-        # set a label for showing success information on screen
 
         successfull = True
     if successfull:
@@ -220,77 +206,42 @@ def Sms_details():
 
     global Sms_details_screen
     global SmsApi
-    global SmsSecrete
-    global SmsMobile
     global SmsApi_entry
-    global SmsSecrete_entry
-    global SmsMobile_entry
 
 
     Sms_details_screen = Toplevel(main_screen)
     Sms_details_screen .title("Register")
-    Sms_details_screen .geometry("650x350")
+    Sms_details_screen .geometry("600x350")
 
-    # Set text variables
     SmsApi = StringVar()
-    SmsSecrete = StringVar()
-    SmsMobile = StringVar()
 
-    # Set label for user's instruction
-    Label(Sms_details_screen, text="Please enter Api and Secrete Key From Your Way2Sms Profile", bg="white", fg="black", width="300", height="2", font=("Calibri", 15)).pack()
+    Label(Sms_details_screen, text="Please enter API Key From Your fast2sms Profile", fg="black", bg="white", width="300", height="2", font=("Calibri", 15)).pack()
     Label(Sms_details_screen, text="").pack()
 
-    # Set username label
-    SmsApi_lable = Label(Sms_details_screen, height="2", width="30",text="Api Key * ")
+    SmsApi_lable = Label(Sms_details_screen, height="2", width="30",text="API Key * ")
     SmsApi_lable.pack()
 
-    # Set username entry
-    # The Entry widget is a standard Tkinter widget used to enter or display a single line of text.
-
-    SmsApi_entry= Entry(Sms_details_screen, width=30, textvariable=SmsApi, show='*')
+    SmsApi_entry= Entry(Sms_details_screen, width=40, textvariable=SmsApi, show='*')
     SmsApi_entry.pack(ipady=2)
 
-    # Set password label
-    SmsSecrete_lable = Label(Sms_details_screen, height="2", width="30", text="Secrete Key * ")
-    SmsSecrete_lable.pack()
-
-    # Set password entry
-    SmsSecrete_entry = Entry(Sms_details_screen,width=30, textvariable=SmsSecrete, show='*')
-    SmsSecrete_entry.pack(ipady=2)
-
-    # Set password label
-    SmsMobile_lable =  Label(Sms_details_screen, height="2", width="30", text="Registered Mobile Number")
-    SmsMobile_lable.pack()
-
-    # Set password entry
-    SmsMobile_entry = Entry(Sms_details_screen, width=30, textvariable=SmsMobile)
-    SmsMobile_entry.pack(ipady=2)
-
-    # Set password entry
     Label(Sms_details_screen, text="").pack()
 
-    # Set register button
     Button(Sms_details_screen, text="Save", width=20, height=2, bg="green", command=Sms_save).pack()
 
 def Sms_save():
-    # get username and password
-    SmsApiKey = SmsApi.get()
-    SmsSecreteKey = SmsSecrete.get()
-    SmsMobileNum = SmsMobile.get()
 
-    combineKeys = SmsApiKey + " " + SmsSecreteKey + " " + SmsMobileNum
-    combineKeys_en = base64.b64encode(combineKeys.encode('utf-8'))
-    # Open file in write mode
+    SmsApiKey = SmsApi.get()
+
+    SmsApiKey_en = base64.b64encode(SmsApiKey.encode('utf-8'))
+
     file = open(dir_path + '/Data/credentials/se', "w")
-    # write username and password information into file
-    file.write(combineKeys_en.decode('utf-8'))
+
+    file.write(SmsApiKey_en.decode('utf-8'))
     file.close()
 
-    encrypt(dir_path + '/Data/credentials/se')
+    encrypt.encrypt(dir_path + '/Data/credentials/se')
 
     SmsApi_entry.delete(0, END)
-    SmsSecrete_entry.delete(0, END)
-    SmsMobile_entry.delete(0, END)
 
 
     Label(Sms_details_screen, text="Details Saved. You can close window", fg="green", font=("calibri", 13)).pack()

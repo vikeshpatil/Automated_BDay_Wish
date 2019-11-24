@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb386794-4077-4aae-80e7-8abfc38baba4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Linux/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Linux/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Linux/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Linux/Data/send_sms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Linux/Data/send_sms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Linux/save_credentials.py" beforeDir="false" afterPath="$PROJECT_DIR$/Linux/save_credentials.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Windows/Data/send_sms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/Data/send_sms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Windows/save_credentials.py" beforeDir="false" afterPath="$PROJECT_DIR$/Windows/save_credentials.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
