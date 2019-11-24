@@ -62,12 +62,12 @@ def mail(receiver_mail, fname):
     # message.attach(img)
 
 # #------------------------Attaching Video------------------
-#     part = MIMEBase('application', "octet-stream")
-#     fo = open(dir_path + 'birthday_vid.mp4', "rb")
-#     part.set_payload(fo.read())
-#     encoders.encode_base64(part)
-#     part.add_header('Content-Disposition', 'attachment; filename="%s"' % os.path.basename("birthday_vid.mp4"))
-#     message.attach(part)
+    part = MIMEBase('application', "octet-stream")
+    fo = open(dir_path + 'birthday_vid.mp4', "rb")
+    part.set_payload(fo.read())
+    encoders.encode_base64(part)
+    part.add_header('Content-Disposition', 'attachment; filename="%s"' % os.path.basename("birthday_vid.mp4"))
+    message.attach(part)
 
     #login to server and send email
     try:
