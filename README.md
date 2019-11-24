@@ -24,6 +24,20 @@ To setup account for sms, we are using Fast2Sms service
    ![fast2sms](fast2sms.png)
    
    *(fast2sms is a paid service. Each message you send will cost 0.40 rupees and they will be deducted from your fast2sms account. Hence if you have 0 account balance then you no longer send sms.)*
+
+<br><br>
+
+If all the above requirements are fulfilled then follow these steps:
+
+Step 1: Run Installation file for required platform (Windows/Linux)
+
+Step 2: Save the login credentials (Facebook, Gmail, Sms)
+
+Step3: Add Person's details to whom have to send Birthday wish
+
+Read following instruction for specific platform
+<br><br>
+
 ## Windows Setup
 
 ### Setup
