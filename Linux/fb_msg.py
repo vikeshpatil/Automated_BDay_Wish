@@ -2,7 +2,7 @@
 from fbchat import Client
 from fbchat.models import *
 
-from Data.encrypt import *
+from encrypt import *
 import base64
 
 import os

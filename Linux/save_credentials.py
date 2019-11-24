@@ -4,13 +4,13 @@
 
 from tkinter import *
 import base64
-from Data import encrypt
+import encrypt
 
 import os
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-if not os.path.exists(dir_path + '/Data/credentials/'):
-    os.mkdir(dir_path + '/Data/credentials')
+if not os.path.exists(dir_path + '/credentials/'):
+    os.mkdir(dir_path + '/credentials')
 
 buffersize = 64 *1024   #encryption or decryption buffer size
 
@@ -104,13 +104,13 @@ def FB_save():
         username_n_pass_en = base64.b64encode(username_n_pass.encode('utf-8'))
 
         # Open file in write mode
-        file = open(dir_path + '/Data/credentials/fbe', "w")
+        file = open(dir_path + '/credentials/fbe', "w")
 
         # write username and password information into file
         file.write(username_n_pass_en.decode('utf-8'))
         file.close()
 
-        encrypt.encrypt(dir_path + '/Data/credentials/fbe')      #encryot the file
+        encrypt.encrypt(dir_path + '/credentials/fbe')      #encryot the file
 
         fbusername_entry.delete(0, END)
         fbpassword_entry.delete(0, END)
@@ -182,12 +182,12 @@ def Gmail_save():
         username_n_pass = username_info + " " + password_info
         username_n_pass_en = base64.b64encode(username_n_pass.encode('utf-8'))
 
-        file = open(dir_path + '/Data/credentials/gme', "w")
+        file = open(dir_path + '/credentials/gme', "w")
 
         file.write(username_n_pass_en.decode('utf-8'))
         file.close()
 
-        encrypt.encrypt(dir_path + '/Data/credentials/gme')
+        encrypt.encrypt(dir_path + '/credentials/gme')
 
         Gmailusername_entry.delete(0, END)
         Gmailpassword_entry.delete(0, END)
@@ -234,12 +234,12 @@ def Sms_save():
 
     SmsApiKey_en = base64.b64encode(SmsApiKey.encode('utf-8'))
 
-    file = open(dir_path + '/Data/credentials/se', "w")
+    file = open(dir_path + '/credentials/se', "w")
 
     file.write(SmsApiKey_en.decode('utf-8'))
     file.close()
 
-    encrypt.encrypt(dir_path + '/Data/credentials/se')
+    encrypt.encrypt(dir_path + '/credentials/se')
 
     SmsApi_entry.delete(0, END)
 

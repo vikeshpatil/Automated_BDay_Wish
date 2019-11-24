@@ -11,6 +11,7 @@ chmod 744 AutomatedBirthday.sh
 chmod 744 Add_Contact.sh
 chmod 744 Registration.sh
 chmod 744 uninstall.sh
+chmod +x chromedriver
 
 chmod 664 ~/.config/systemd/user/AutomatedBirthday.service
 chmod 664 ~/.config/systemd/user/chromium.service

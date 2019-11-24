@@ -94,7 +94,7 @@ def send_msg(FirstName, Last_Name, GroupNames):
 
     browser.get('https://www.facebook.com/events/birthdays/')
 
-    feed = 'Happy Birthday !'
+    feed = 'Happy Birthday '
 
     element = browser.find_elements_by_xpath("//*[@class ='enter_submit\
     uiTextareaNoResize uiTextareaAutogrow uiStreamInlineTextarea \

@@ -10,7 +10,7 @@ with open(dir_path + "/AutomatedBirthday.sh", 'w') as f:
     f.write('#!/usr/bin/env bash\n\npython '+ dir_path + main_name)
 
 with open(dir_path + "/Add_Contact.sh", 'w') as f:
-    f.write('#!/usr/bin/env bash\n\npython '+ dir_path + '/Data/save_data.py')
+    f.write('#!/usr/bin/env bash\n\npython '+ dir_path + '/save_data.py')
 
 with open(dir_path + "/Registration.sh", 'w') as f:
     f.write('#!/usr/bin/env bash\n\npython '+ dir_path + '/save_credentials.py')

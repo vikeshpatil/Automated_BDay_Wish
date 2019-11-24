@@ -3,7 +3,7 @@
 import requests
 import json
 
-from Data import encrypt
+import encrypt
 import base64
 
 import os

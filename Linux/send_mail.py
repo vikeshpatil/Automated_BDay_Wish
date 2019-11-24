@@ -3,7 +3,7 @@ import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import base64
-from Data.encrypt import *
+from encrypt import *
 import os
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
@@ -84,5 +84,3 @@ def mail(receiver_mail, fname):
         print(e)
     finally:
         server.quit()
-
-    encrypt(dir_path + '/credentials/gme')

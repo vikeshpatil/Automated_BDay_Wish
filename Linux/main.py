@@ -1,8 +1,10 @@
-from Data.log import *
-from Data.send_sms import *
-from Data.send_mail import *
-from Data.whatsapp_msg import *
-from Data.fb_msg import *
+from log import *
+import send_sms
+import send_mail
+import whatsapp_msg
+import fb_msg
+
+import time
 
 import datetime
 from openpyxl import load_workbook
@@ -17,7 +19,7 @@ today = datetime.date.today()
 #------------- Reading data in text file----------------------#
 def read_txt():
 
-    with open(dir_path + '/Data/credentials/text.txt', mode='r') as f:
+    with open(dir_path + '/credentials/text.txt', mode='r') as f:
         readContent = f.readlines()
     for j in range(len(readContent)):
         if(readContent[j].split()[4] == str(today)):
@@ -36,6 +38,7 @@ def read_txt():
                 whatapp_contact_list.append(whatapp_name)
 
             print("It's " + fname + "'s Happy B'day ")
+
             try:
                 print('Sending SMS ...')
                 send_sms.sendPostRequest(str(mobile), fname)  # send sms
@@ -52,14 +55,14 @@ def read_txt():
 
             try:
                 print('Sending wish on facebook ...')
-                fb_msg.send_msg(fname, lname, whatapp_contact_list)  # facebook message
+                fb_msg.send_fmsg(fname, lname, whatapp_contact_list)  # facebook message
                 print('Facebook message sent.')
             except:
                 print('Unable to send Facebook message')
 
             try:
                 print('Sending wish on whatsapp ...')
-                whatsapp_msg.send_msg(whatapp_contact_list, fname)  # whatsapp message
+                whatsapp_msg.send_wmsg(whatapp_contact_list, fname)  # whatsapp message
                 print('Whatsapp message sent.')
             except:
                 print('Unable to send Whatsapp message')
@@ -72,7 +75,7 @@ def read_txt():
 
 def read_csv():
 
-    with open(dir_path + '/Data/credentials/csv.csv') as f:
+    with open(dir_path + '/credentials/csv.csv') as f:
         reader = csv.reader(f, delimiter=',')
 
         for row in reader:
@@ -92,6 +95,7 @@ def read_csv():
                         whatapp_contact_list.append(whatapp_name)
 
                     print("It's " + fname + "'s Happy B'day ")
+
                     try:
                         print('Sending SMS ...')
                         send_sms.sendPostRequest(str(mobile), fname)  # send sms
@@ -108,14 +112,14 @@ def read_csv():
 
                     try:
                         print('Sending wish on facebook ...')
-                        fb_msg.send_msg(fname, lname, whatapp_contact_list)  # facebook message
+                        fb_msg.send_fmsg(fname, lname, whatapp_contact_list)  # facebook message
                         print('Facebook message sent.')
                     except:
                         print('Unable to send Facebook message')
 
                     try:
                         print('Sending wish on whatsapp ...')
-                        whatsapp_msg.send_msg(whatapp_contact_list, fname)  # whatsapp message
+                        whatsapp_msg.send_wmsg(whatapp_contact_list, fname)  # whatsapp message
                         print('Whatsapp message sent.')
                     except:
                         print('Unable to send Whatsapp message')
@@ -124,7 +128,7 @@ def read_csv():
 
 # ---------------------Excel Reading----------------------
 def read_excel():
-    wb = load_workbook(dir_path + '/Data/credentials/excel.xlsx')
+    wb = load_workbook(dir_path + '/credentials/excel.xlsx')
     ws = wb.active
     print('Reading excel')
     for row in ws.iter_rows(min_row=2, values_only=True):
@@ -145,6 +149,7 @@ def read_excel():
                     whatapp_contact_list.append(whatapp_name)
 
                 print("It's " + fname + "'s Happy B'day ")
+
                 try:
                     print('Sending SMS ...')
                     send_sms.sendPostRequest(str(mobile), fname)  # send sms
@@ -161,14 +166,14 @@ def read_excel():
 
                 try:
                     print('Sending wish on facebook ...')
-                    fb_msg.send_msg(fname, lname, whatapp_contact_list)  # facebook message
+                    fb_msg.send_fmsg(fname, lname, whatapp_contact_list)  # facebook message
                     print('Facebook message sent.')
                 except:
                     print('Unable to send Facebook message')
 
                 try:
                     print('Sending wish on whatsapp ...')
-                    whatsapp_msg.send_msg(whatapp_contact_list, fname)  # whatsapp message
+                    whatsapp_msg.send_wmsg(whatapp_contact_list, fname)  # whatsapp message
                     print('Whatsapp message sent.')
                 except:
                     print('Unable to send Whatsapp message')
@@ -178,7 +183,7 @@ def read_excel():
 
 time.sleep(180)
 
-if os.path.exists(dir_path + '/Data/log.txt'):
+if os.path.exists(dir_path + '/log.txt'):
     if not log_read():
         log_write()
         read_excel()  #method to read data
