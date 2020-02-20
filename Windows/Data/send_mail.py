@@ -61,10 +61,10 @@ def mail(receiver_mail, fname):
     message.attach(MIMEText(html, 'html'))
 
     # ---------------Sending image-------------
-    # img_open = open(dir_path + '/birthdaypic.jpg', 'rb')
-    # img = MIMEImage(img_open.read())
-    # img_open.close()
-    # message.attach(img)
+    img_open = open(dir_path + '/birthdaypic.jpg', 'rb')
+    img = MIMEImage(img_open.read())
+    img_open.close()
+    message.attach(img)
 
 #------------------------Attaching Video------------------
     part = MIMEBase('application', "octet-stream")
